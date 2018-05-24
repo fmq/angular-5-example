@@ -9,8 +9,8 @@ pipeline{
     stage ('install modules'){
       steps{
         sh '''
-          npm install --verbose -d 
-          npm install --save classlist.js
+          npm install --proxy http://proxy.hospitalaleman.com:8080 --verbose -d 
+          npm install --proxy http://proxy.hospitalaleman.com:8080 --save classlist.js
         '''
       }
     }
